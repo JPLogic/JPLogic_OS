@@ -1,0 +1,8 @@
+local ticketDB = 
+{
+[testing1] = {["Origin"] = "LLS", ["Destination"] = "WNW", ["UserID"] = "#UsersID"},
+[testing2] = {["Origin"] = "WNW", ["Destination"] = "LLS", ["UserID"] = "#UserID1"},
+} 
+ 
+--^^Random 20 Character Key = Bought from = Going to = Player who bought ^^
+
