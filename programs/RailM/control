@@ -1,0 +1,14 @@
+
+x, y = mon.getSize()
+rednet.open(rednetside)
+------------------------
+mon.clear()
+term.clear()
+mon.setCursorPos(2,1)
+mon.write(title)
+mon.setCursorPos(x/2-4,2)
+mon.write(page)
+sleep(1)
+
+
+

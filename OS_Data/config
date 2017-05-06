@@ -1,0 +1,9 @@
+
+[Specific]
+rss = back
+com = Control
+mon = top
+
+[Generic]
+title = JPLogics Railway Management
+bg = OS_Data/Images/bg

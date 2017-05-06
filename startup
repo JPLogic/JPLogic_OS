@@ -1,0 +1,53 @@
+--Settings
+os.loadAPI("OS_API/settings")
+settings = settings.open("OS_Data/config")
+smon = settings.read("Specific", "mon")
+scom = settings.read("Specific", "com")
+srss = settings.read("Specific", "rss")
+sbg = settings.read("Generic", "bg")
+stitle = settings.read("Generic", "title")
+OSVer = settings.read("Generic", "ver")
+settings = settings.close("OS_Data/config")
+mon = peripheral.wrap(smon)
+bg = paintutils.loadImage(sbg)
+com = scom
+os.unloadAPI("OS_API/settings")
+
+--Setup 
+local x,y = mon.getSize()
+rednet.open(srss)
+local function updateCheck()
+
+end
+
+-- Tables
+local progressbar = {"-----------","o----------","oo---------","ooo--------","oooo-------","ooooo------","oooooo-----","ooooooo----","oooooooo---","ooooooooo--","oooooooooo-","ooooooooooo"} 
+--Program
+mon.clear()
+term.clear()
+mon.setCursorPos(1,1)
+mon.restoreTo = term.current()
+term.redirect(mon)
+paintutils.drawImage(bg, 1, 1)
+sleep(2)
+term.setBackgroundColor(colors.black)
+term.redirect(mon.restoreTo)
+term.setCursorPos(1,1)
+print("Server Console")
+mon.setCursorPos(2,1)
+mon.write(stitle)
+mon.setCursorPos(5,11)
+mon.write(com)
+mon.write(" is loading...")
+mon.setCursorPos(x/2-1,2)
+mon.write(OSVer)
+for i=1,#progressbar do
+mon.setCursorPos(x/2-4,12)
+
+mon.write(progressbar[i])
+sleep(0.5)
+end
+
+--Shutdown
+
+
