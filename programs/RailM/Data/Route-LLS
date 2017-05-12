@@ -1,0 +1,24 @@
+--Route Tables
+  EntryRoute = {[UPP1],[UPP2],[DNP1],[DNP2]}
+  ExitRoute = {[P1UP],[P1UP],[P1DN],[P2DN]}
+  
+--Routes
+  function UPP1()
+    --Check P1 is clear
+    
+        --If NOT then check other platforms
+        
+        --If NO Platforms free, hold train until there is.
+    
+    --Check Route between EntrySig & P1 is clear
+    
+    --Set Route
+    
+    --Hold route until Train is clear of lines
+    
+  end
+  
+    
+    
+
+
